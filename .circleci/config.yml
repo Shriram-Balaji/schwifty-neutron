@@ -5,7 +5,7 @@
 general:
   branches:
     only:
-          - develop
+          # - develop
           - master  # list of branches to build
 version: 2
 jobs:
