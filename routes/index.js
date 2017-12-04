@@ -1,9 +1,15 @@
-const express = require('express');
-const router  = express.Router();
+const express           = require('express');
+const router            = express.Router();
+const productHuntRoutes = require('./product-hunt.routes');
+const dribbbleRoutes    = require('./dribbble.routes');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.json({"success":true, "message": 'Hello' });
+// router configuration
+router.get('/', (req, res)=>{
+  res.status(200).send("Welcome to Schwifty Neutron");
 });
+
+router.use('/dribbble', dribbbleRoutes);
+router.use('/product-hunt',productHuntRoutes);
+// router.use('/github', githubRoutes);
 
 module.exports = router;
