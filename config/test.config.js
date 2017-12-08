@@ -1,6 +1,6 @@
 const config                = {};
-config.env                  = 'local';
-config.port                 = process.env.PORT || 3030;
+config.env                  = 'test';
+config.port                 =  process.env.PORT || 3030;
 config.protocol             = 'http';
 config.host                 = 'localhost';
 config.mountpoint           = 'api/v1';
