@@ -1,6 +1,6 @@
 const path       = require('path');
-const HOMEDIR    = path.join(__dirname, '..','..','..');
-const config     = require(path.join(HOMEDIR,'./config'));
+const HOME_DIR    = path.join(__dirname, '..','..','..');
+const config     = require(path.join(HOME_DIR,'./config'));
 const request    = require('supertest');
 const assert     = require('chai').assert;
 const protocol   = config.protocol ? config.protocol : 'http' ;

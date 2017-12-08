@@ -1,3 +1,4 @@
+const path              = require('path');
 const express           = require('express');
 const router            = express.Router();
 const HOME_DIR          = path.join(__dirname, '..');
@@ -13,7 +14,7 @@ const initExpressRoutes = function(pool) {
     res.status(200).send("Welcome to Schwifty Neutron");
   });
 
-  router.use('/auth',authRoutes(pool));
+  // router.use('/auth',authRoutes(pool));
   router.use('/github',githubRoutes(pool));
   router.use('/dribbble', dribbbleRoutes(pool));
   router.use('/product-hunt',productHuntRoutes(pool));

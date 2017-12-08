@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 const path    = require('path')
-const HOMEDIR = path.join(__dirname, '..')
-const app     = require(path.join(HOMEDIR,'app'));
+const HOME_DIR = path.join(__dirname, '..')
+const app     = require(path.join(HOME_DIR,'app'));
 const debug   = require('debug')('schwifty-neutron');
 const http    = require('http');
 const port    = normalizePort(process.env.PORT || 3030);

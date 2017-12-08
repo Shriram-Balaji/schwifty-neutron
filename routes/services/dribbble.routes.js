@@ -7,17 +7,11 @@ const router   = express.Router();
 
 const mock         = require(path.join(HOME_DIR, 'mock', 'dribbble-shots'));
 
-const initDribbleRoutes = function(pool){
-
+const initDribbleRoutes = function(pool){  
 // same as GET /shots
   router.get('/', function(req, res){
     // TODO - Add git req
-    // let querystring = req.query;
-    let sql  = 'SELECT * from "services"';
-    pool.query(sql)
-      .then( result => console.log(result.rows[0]))
-      .catch( error => console.error(error));
-
+    
     res.status(200).json(mock);
   });
 
