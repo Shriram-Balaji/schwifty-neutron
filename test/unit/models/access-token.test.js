@@ -3,7 +3,7 @@ const assert           = require('chai').assert;
 const HOME_DIR         = path.join(__dirname, '..','..','..');
 const TEST_DIR         = path.join(HOME_DIR, 'test');
 const config           = require(path.join(HOME_DIR, 'config'));
-const AccessTokenModel = require(path.join(HOME_DIR, 'models', 'access-token.models'));
+const AccessTokenModel = require(path.join(HOME_DIR, 'models', 'auth','access-token.model'));
 const BaseDatabaseTest = require(path.join(TEST_DIR, 'util', 'base.database.test'));
 const BDBT             = new BaseDatabaseTest();
 

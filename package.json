@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "./node_modules/mocha/bin/mocha -R spec test/integration/routes/*.js test/unit/models/*.js"
+    "test": "./node_modules/mocha/bin/mocha -R spec test/unit/*.js test/unit/models/*.js test/unit/routes/*.js",
+    "spec": " ./node_modules/mocha/bin/mocha -R spec test/integration/routes/*.js "
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -19,8 +20,11 @@
     "serve-favicon": "~2.4.5"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.1",
     "chai": "^4.1.2",
+    "eslint": "^4.15.0",
     "mocha": "^4.0.1",
+    "request-debug": "^0.2.0",
     "sinon": "^4.1.2",
     "supertest": "^3.0.0"
   }

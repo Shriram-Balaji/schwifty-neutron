@@ -1,5 +1,6 @@
 {
     "extends": "eslint:recommended",
+    "parser":"babel-eslint",
     "env": {
         "browser": true,
         "commonjs": true,
@@ -11,6 +12,7 @@
             "jsx": true
         },
         "sourceType": "module"
+        
     },
     "plugins": [
         "import",
@@ -19,7 +21,6 @@
         "standard"
       ],
     "rules": {
-        "no-const-assign": "warn",
         "no-this-before-super": "warn",
         "no-undef": "warn",
         "no-unreachable": "warn",

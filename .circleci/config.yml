@@ -40,8 +40,8 @@ jobs:
 
       # start the application!    
       - run: 
-          command: npm start          
+          command: NODE_ENV=test npm start          
           background: true
           
       # run tests!
-      - run: npm test
+      - run: NODE_ENV=test npm test

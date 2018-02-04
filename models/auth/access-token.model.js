@@ -35,9 +35,20 @@ AccessTokenModel.prototype.create = function(data, callback) {
 
 AccessTokenModel.prototype.read = function(data, callback){
   let pool = this.pool;
-  if(_.has(data,'token_id')){
-    let sql = 'SELECT * FROM access_token WHERE token_id = $1';
-    let params = [data.token_id];
+  let input, options;
+    if(_.has(data,'name')){
+      input = data.name
+      options = 'name'
+    }
+    else if(_.has(data,'token_id')){
+      input  = data.token_id
+      options = 'token_id'
+    }
+    else {
+      callback(new Error("Required Parameters Missing - token_id/name"), null);
+    }
+    let sql = `SELECT * FROM access_token WHERE ${options} = $1`;
+    let params = [input];
     pool.query(sql, params, (err, res) => {
       if (err) 
         callback(err, null);
@@ -45,11 +56,6 @@ AccessTokenModel.prototype.read = function(data, callback){
         callback(null, res.rows[0]);
     });  
   }
-  else{
-    let err = new Error("Required Parameters Missing - token_id");
-    callback(err, null);
-  }
-};
 
 AccessTokenModel.prototype.update = function(data, callback) {
   let pool = this.pool;

@@ -13,10 +13,9 @@
 
 ## REST Setup
 
-- Initialize endpoints and routes
+- Initialize basic endpoints and models  ✓
+- Mock up with data from the services, store them in the database and then serve them to work with frontend [wip]
 - Decide endpoints for initial rollout [services](#services_list)
-- Setup all Endpoints and auth-tokens in configurations
-- Mock up with data from the services, store them in the database and then serve them to work with frontend
 - Maybe convert REST endpoints to GraphQL
 
 ## Testing
@@ -26,6 +25,7 @@
 
 ## Build and Deploy
 
+ Complete consideration asap
 - Decide a service to deploy init builds
 - Heroku vs AWS vs GCP?
 
